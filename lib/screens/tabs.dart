@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_complete_meals_app/models/meal.dart';
 
 import 'package:flutter_complete_meals_app/screens/categories.dart';
-import 'package:flutter_complete_meals_app/screens/fiters.dart';
+import 'package:flutter_complete_meals_app/screens/filters.dart';
 import 'package:flutter_complete_meals_app/screens/meals.dart';
 import 'package:flutter_complete_meals_app/widgets/main_drawer.dart';
 
@@ -50,14 +50,16 @@ class _TabsScreenState extends State<TabsScreen> {
     });
   }
 
-  void _setScreen(String identifier) {
+  void _setScreen(String identifier) async {
     Navigator.of(context).pop();
     if (identifier == 'filters') {
-      Navigator.of(context).push(
+      final result = await Navigator.of(context).push<Map<Filter, bool>>(
         MaterialPageRoute(
           builder: (ctx) => const FiltersScreen(),
         ),
       );
+
+      print(result);
     }
   }
 

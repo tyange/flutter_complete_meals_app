@@ -12,7 +12,7 @@ const kInitialFilters = {
   Filter.glutenFree: false,
   Filter.lactoseFree: false,
   Filter.vegetarian: false,
-  Filter.vegan: false,
+  Filter.vegan: false
 };
 
 class TabsScreen extends ConsumerStatefulWidget {
@@ -63,9 +63,7 @@ class _TabsScreenState extends ConsumerState<TabsScreen> {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text(
-          activePageTitle,
-        ),
+        title: Text(activePageTitle),
       ),
       drawer: MainDrawer(
         onSelectScreen: _setScreen,
@@ -77,11 +75,11 @@ class _TabsScreenState extends ConsumerState<TabsScreen> {
         items: const [
           BottomNavigationBarItem(
             icon: Icon(Icons.set_meal),
-            label: "Category",
+            label: 'Categories',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.star),
-            label: "Favorites",
+            label: 'Favorites',
           ),
         ],
       ),

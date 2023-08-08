@@ -1,14 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-// import 'package:flutter_complete_meals_app/screens/tabs.dart';
-// import 'package:flutter_complete_meals_app/widgets/main_drawer.dart';
+// import 'package:meals/screens/tabs.dart';
+// import 'package:meals/widgets/main_drawer.dart';
 import 'package:flutter_complete_meals_app/providers/filters_provider.dart';
 
 class FiltersScreen extends ConsumerWidget {
-  const FiltersScreen({
-    super.key,
-  });
+  const FiltersScreen({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -40,10 +38,7 @@ class FiltersScreen extends ConsumerWidget {
                   ),
             ),
             activeColor: Theme.of(context).colorScheme.tertiary,
-            contentPadding: const EdgeInsets.only(
-              left: 34,
-              right: 22,
-            ),
+            contentPadding: const EdgeInsets.only(left: 34, right: 22),
           ),
           SwitchListTile(
             value: activeFilters[Filter.lactoseFree]!,
@@ -65,10 +60,7 @@ class FiltersScreen extends ConsumerWidget {
                   ),
             ),
             activeColor: Theme.of(context).colorScheme.tertiary,
-            contentPadding: const EdgeInsets.only(
-              left: 34,
-              right: 22,
-            ),
+            contentPadding: const EdgeInsets.only(left: 34, right: 22),
           ),
           SwitchListTile(
             value: activeFilters[Filter.vegetarian]!,
@@ -90,10 +82,7 @@ class FiltersScreen extends ConsumerWidget {
                   ),
             ),
             activeColor: Theme.of(context).colorScheme.tertiary,
-            contentPadding: const EdgeInsets.only(
-              left: 34,
-              right: 22,
-            ),
+            contentPadding: const EdgeInsets.only(left: 34, right: 22),
           ),
           SwitchListTile(
             value: activeFilters[Filter.vegan]!,
@@ -115,10 +104,7 @@ class FiltersScreen extends ConsumerWidget {
                   ),
             ),
             activeColor: Theme.of(context).colorScheme.tertiary,
-            contentPadding: const EdgeInsets.only(
-              left: 34,
-              right: 22,
-            ),
+            contentPadding: const EdgeInsets.only(left: 34, right: 22),
           ),
         ],
       ),
